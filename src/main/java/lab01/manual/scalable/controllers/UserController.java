@@ -18,8 +18,10 @@ import lab01.manual.scalable.services.UserService;
 @RequestMapping("/users")
 public class UserController {
 
-    // Injecting the UserService to handle business logic related to users (making use of dependency injection)
+    // Injecting the UserService to handle business logic related to users (making
+    // use of dependency injection)
     private final UserService userService;
+
     public UserController(UserService userService) {
         this.userService = userService;
     }
@@ -44,5 +46,9 @@ public class UserController {
         return userService.createUser(user);
     }
 
-    
+    @GetMapping("/sim1")
+    public User sim1() {
+        return new User();
+    }
+
 }
