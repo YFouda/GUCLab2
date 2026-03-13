@@ -51,4 +51,8 @@ public class UserController {
         return new User();
     }
 
+    @GetMapping("/sim2")
+    public User sim2() {
+        return new User();
+    }
 }
