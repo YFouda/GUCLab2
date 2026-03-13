@@ -19,6 +19,7 @@ import lab01.manual.scalable.services.UserService;
 public class UserController {
 
     // Injecting the UserService to handle business logic related to users (making
+    //
     // use of dependency injection)
     private final UserService userService;
 
@@ -55,4 +56,10 @@ public class UserController {
     public User sim2() {
         return new User();
     }
+
+    @GetMapping("/me")
+    public User getDummy() {
+        return new User("Yassin Fouda", 23, "yassin.fouda@gmail.com");
+    }
+
 }
